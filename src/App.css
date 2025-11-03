@@ -1,38 +1,70 @@
+/* Background tổng thể */
 .App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+}
+
+/* Container calculator */
+.sum-calculator {
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 30px 40px;
+  width: 350px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Title */
+.sum-calculator h2 {
+  margin-bottom: 20px;
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Input boxes */
+.sum-calculator input {
+  width: 80%;
+  padding: 8px;
+  margin: 10px 0 15px 0;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  font-size: 16px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Button */
+.sum-calculator button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #4caf50;
   color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.App-link {
-  color: #61dafb;
+/* Hover effect cho button */
+.sum-calculator button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Lỗi */
+.sum-calculator .error {
+  color: #e74c3c;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Kết quả */
+.sum-calculator .result {
+  color: #2c3e50;
+  font-weight: bold;
+  margin-top: 15px;
+  font-size: 18px;
 }
